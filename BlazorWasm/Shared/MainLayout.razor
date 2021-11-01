@@ -1,0 +1,108 @@
+﻿@inherits LayoutComponentBase
+
+<header>
+    <div class="banner-header">
+        <div class="container">
+            <img src="https://cdn.tgdd.vn/2021/09/banner/1200-44-1200x44-10.png"
+                 alt="" />
+        </div>
+    </div>
+    <div class="header-top">
+        <div class="container">
+            <a href="/" class="header-logo">
+                <i class="icon-logo"></i>
+            </a>
+            <div class="header__search">
+                <input id="skw"
+                       type="text"
+                       class="input-search"
+                       placeholder="Bạn tìm gì..."
+                       name="key"
+                       autocomplete="off"
+                       maxlength="100" 
+                       @bind-value="keyword"
+                       />
+                <button type="button" @onclick="SearchProduct">
+                    <i class="icon-search"></i>
+                </button>
+                <div id="search-result" style="display: none">
+                    <ul class="suggest_search"></ul>
+                </div>
+            </div>
+            <a href="/" class="header__history">Lịch sử đơn hàng</a>
+            <div class="bordercol"></div>
+            <a style="padding: 0 !important"
+               href="javascript:void(0)"
+               class="header__hot">
+            </a>
+            <div class="header__listtop">
+                <div class="bordercol"></div>
+                <div class="divitem">
+                    <a href="/">24h<br />Công nghệ</a>
+                </div>
+                <div class="bordercol"></div>
+                <div class="divitem">
+                    <a href="/">Hỏi Đáp</a>
+                </div>
+                <div class="bordercol"></div>
+                <div class="divitem">
+                    <a href="/">Game App</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header__main">
+        <div class="container">
+            <ul class="main-menu">
+                <li class="active">
+                    <a href="/">
+                        <span>Trang chủ</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="/dtdd">
+                        <i class="icon-dienthoai"></i>
+                        <span>Điện thoại</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/laptop-ldp">
+                        <i class="icon-laptop"></i>
+                        <span>Laptop</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/may-tinh-bang">
+                        <i class="icon-tablet"></i>
+                        <span>Tablet</span>
+                    </a>
+                </li>
+                <li class="phukien">
+                    <a href="/phu-kien">
+                        <i class="icon-phukien"></i>
+                        <span>Phụ kiện</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/dong-ho-thong-minh-ldp">
+                        <i class="icon-dhthongminh"></i>
+                        <span>Đồng hồ thông minh</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/dong-ho">
+                        <i class="icon-dhthoitrang"></i>
+                        <span>Đồng hồ thời trang</span>
+                    </a>
+                </li>
+                <li class="pcmayin">
+                    <a href="/pc-may-in">
+                        <i class="icon-pcmayin"></i>
+                        <span>PC, Máy in</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+@Body

@@ -1,0 +1,48 @@
+﻿@page "/"
+
+<div class="container mt-5">
+    @if (Products == null)
+    {
+        <div>Loading...</div>
+    }
+    else
+    {
+        <button class="btn btn-primary mb-2 btn-showhide" @onclick="ShowHideProduct">Hiển thị / ẩn sản phẩm</button>
+        <h2>Vị trí chuột khi rê vào hình: @Coordinates</h2>
+        if (showProduct)
+        {
+            <ul class="listproduct">
+                @foreach (var item in Products)
+                {
+                    <li class="item">
+                        <a href="/" class="main-contain">
+                            <div class="item-label">
+                                <span class="lb-tragop">Trả góp 0%</span>
+                            </div>
+                            <div class="item-img item-img_42">
+                                <img class="thumb ls-is-cached lazyloaded"
+                                     alt="@item.Name"
+                                     src="@item.ThumbnailImage" @onmousemove="@Mouse_Move"/>
+                                <img src="https://cdn.tgdd.vn/ValueIcons/label-moi-ra-mat-fnal.png"
+                                     width="40"
+                                     height="40"
+                                     loading="lazy"
+                                     class="lbliconimg lbliconimg_42 tgdd" />
+                            </div>
+
+                            <h3>@item.Name</h3>
+                            <strong class="price">@item.Price₫</strong>
+                        </a>
+                        <div class="item-bottom">
+                            <a href="#" class="shiping"></a>
+                        </div>
+                    </li>
+                }
+
+
+            </ul>
+        }
+
+    }
+
+</div>
